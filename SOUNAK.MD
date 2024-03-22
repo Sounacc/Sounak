@@ -1,15 +1,24 @@
 # Sounak @AMAGI
+
 ## _Mastering the Art of LLM Choreography_
+
 #
+
 #
+
 #
+
 #
+
 #### Pending Tasks
-- Task Pending 1
-- Task Pending 2
-- Task Pending 3
+
+- done
+- done
+- openai key for finetuning
 
 #### Finished Tasks
-- Task Finished 1
-- Task Finished 2
-- Task Finished 3
+
+- amazon item selection task
+- amazon price filter task
+- amazon brand filter task
+- amazon add to cart task

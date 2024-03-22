@@ -1,0 +1,40 @@
+{
+  [
+    {
+      "prompt": "Open amazon to order 'notebook' and select the first item shown",
+      "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"notebook\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.locator(\".puis-card-container > div\").first.get_by_role(\"link\").first.click()\n"
+    }
+    {
+      "prompt": "Open amazon to order 'notebook' and select the second item shown",
+      "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"notebook\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.locator(\"div:nth-child(8) > .sg-col-inner > .s-widget-container > div > div > span > .puis-card-container\").click()\n"
+    }
+    {
+      "prompt": "Open amazon to order 'notebook' and select the third item shown",
+      "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"notebook\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.locator(\"div:nth-child(9) > .sg-col-inner > .s-widget-container > div > div > span > .puis-card-container\").click()\n"
+    }
+    {
+      "prompt": "Open amazon to order 'notebook' and select the fourth item shown",
+      "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"notebook\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.locator(\"div:nth-child(10) > .sg-col-inner > .s-widget-container > div > div > span > .puis-card-container\").click()\n"
+    }
+    {
+      "prompt": "Open amazon to order 'lamp' and apply price filter 'under 500' then select the first item shown",
+      "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"lamp\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.get_by_role(\"link\", name=\"Under ₹\").click()\npage.locator(\".a-section > div:nth-child(2) > div:nth-child(2)\").first.click()\n"
+    }
+    {
+        "prompt": "Open amazon to order 'lamp' and apply price filter between range '1000' and '2000' then select the first item shown",
+        "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"lamp\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.get_by_placeholder(\"Min\").click()\npage.get_by_placeholder(\"Min\").fill(\"1000\")\npage.get_by_placeholder(\"Max\").click()\npage.get_by_placeholder(\"Max\").fill(\"2000\")\npage.get_by_label(\"Price\", exact=True).get_by_label(\"Go\").click()\npage.locator(\".a-section > div:nth-child(2) > div:nth-child(2)\").first.click()\n"
+      }
+      {
+        "prompt": "Open amazon to order 'lamp' and apply brand filter choose 'Homesake' then select the first item shown",
+        "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"lamp\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\npage.get_by_role(\"link\", name=\"Homesake\", exact=True).click()\npage.locator(\".a-section > div:nth-child(2) > div:nth-child(2)\").first.click()\n"
+      }
+      {
+        "prompt": "Open amazon to order 'lamp' and add the first item into the cart",
+        "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"lamp\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\nwith page.expect_popup() as page1_info:\n\tpage.locator(\".puis-card-container > div\").first.get_by_role(\"link\").first.click()\npage1 = page1_info.value\npage1.get_by_label(\"Add to Cart\").click()\n"
+      }
+      {
+        "prompt": "Open amazon to order 't-shirts for men',select the first item then choose color 'Wine' then add to cart",
+        "generated_code": "page.goto(\"https://www.amazon.in/\")\npage.get_by_placeholder(\"Search Amazon.in\").fill(\"t-shirts for men\")\npage.get_by_placeholder(\"Search Amazon.in\").press(\"Enter\")\nwith page.expect_popup() as page1_info:\n\tpage.locator(\".puis-card-container > div\").first.get_by_role(\"link\").first.click()\npage1 = page1_info.value\npage1.get_by_role(\"button\", name=\"Wine\").click()\npage1.get_by_title(\"Add to Shopping Cart\").click()\n"
+      }
+    ]
+  }
